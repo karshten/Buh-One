@@ -1,0 +1,41 @@
+.clients {
+  margin: 130px 0;
+
+
+  & .clients__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    & .image img {
+      max-width: 255px;
+      max-height: 150px;
+      cursor: pointer;
+    }
+
+  }
+
+  & {
+
+    & .flex-btnsPag {
+      margin-top: 60px;
+
+      & .swiper__btns {
+        justify-content: flex-end;
+
+        & .swiper-button-next, .swiper-button-prev {
+          background: rgb(183, 210, 238);
+
+          &:hover {
+            background: #005FA3;
+          }
+        }
+      }
+
+      & .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        background: #005FA3;
+      }
+    }
+  }
+}

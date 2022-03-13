@@ -1,0 +1,58 @@
+.specialize {
+  margin-top: 80px;
+}
+
+.cards__box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.specialize .item__accounting {
+  position: relative;
+  background: url("../images/Rectangle 2.svg") no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  max-width: 30.3%;
+  height: 370px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 45px 45px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.item__accounting {
+  &::after{
+    content: " ";
+    position: absolute;
+    background: rgba(34, 161, 245, 0.64);
+    width: 10%;
+    height: 10%;
+    top: 50%;
+    bottom: 50%;
+    right: 50%;
+    left: 50%;
+    transition: 0.4s ease;
+    opacity: 0;
+  }
+  &:hover {
+    &::after {
+      opacity: .5;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      transition: .7s ease-in-out;
+    }
+  }
+}
+
+.specialize .item__accounting p {
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+  max-width: 50%;
+  z-index: 100;
+}

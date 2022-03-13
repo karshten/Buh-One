@@ -1,0 +1,113 @@
+.footer {
+  padding: 120px 0 140px;
+  margin: 140px 0;
+  background: url("../images/Rectangle (1).png") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 623px;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer .contact__info {
+  max-width: 500px;
+}
+
+.footer .contact__info .info {
+  font-size: 1.2em;
+  color: #BDBDBD;
+  margin-bottom: 60px;
+}
+
+.footer .wrap__contacts {
+  display: flex;
+
+  & a {
+    text-decoration: none;
+    color: #BDBDBD;
+    font-size: 1.3em;
+    margin-right: 40px;
+  }
+}
+
+.footer .wrap__contacts a li {
+  list-style: none;
+}
+
+.footer h2 {
+  color: #fff;
+}
+
+
+/*inputs*/
+
+.footer .contact__info p {
+  font-size: 1.1em;
+  color: #fff;
+}
+
+.footer .inputs__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .input__item {
+  max-width: 45%;
+}
+
+.footer .input {
+  width: 100%;
+  font-size: 1.5em;
+  border: none;
+  border-bottom: 1px solid #BDBDBD;
+  outline: none;
+  color: #c1c1c1;
+  background: inherit;
+  padding-bottom: 5px;
+}
+
+.footer .contact__info {
+  max-width: 540px;
+}
+
+.footer .add__comment__box textarea {
+  width: 100%;
+  font-size: 1.5em;
+  resize: none;
+  min-height: 120px;
+  color: #c1c1c1;
+  background: inherit;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #BDBDBD;
+}
+
+.footer .add__comment__box .btn_ {
+  margin-top: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.textarea {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.footer .desc {
+  margin: 0;
+}
+
+.footer .footer__bottom {
+  margin: 170px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .footer__bottom p {
+  margin-bottom: 40px;
+  color: #BDBDBD;
+}

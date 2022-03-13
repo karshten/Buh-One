@@ -1,0 +1,53 @@
+.reviews {
+  margin-top: 140px;
+
+  & .comments {
+    max-width: 920px;
+    margin: 0 auto;
+    cursor: grab;
+
+    & .core__comment {
+      font-size: 1.2em;
+    }
+
+    & .person {
+      display: flex;
+      align-items: center;
+      margin-top: 90px;
+
+      & .avatar__img {
+        margin-right: 35px;
+
+      }
+    }
+  }
+
+  & .swiper-wrapper {
+
+    & .swiper-slide {
+      background: #e7e8ef;
+      padding: 50px 0;
+      border-radius: 3%;
+    }
+  }
+
+  & .flex-btnsPag {
+    margin-top: 60px;
+
+    & .swiper__btns {
+      justify-content: flex-end;
+
+      & .swiper-button-next, .swiper-button-prev {
+        background: rgb(183, 210, 238);
+
+        &:hover {
+          background: #005FA3;
+        }
+      }
+    }
+
+    & .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+      background: #005FA3;
+    }
+  }
+}
