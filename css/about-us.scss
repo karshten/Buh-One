@@ -1,67 +1,108 @@
 .about__us {
-    margin-top: 150px;
+  margin-top: 150px;
 }
+
 .about__us .container {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
+
 .about__us .about__box {
-    width: 39%;
+  max-width: 39%;
 }
 
 .about__us .long__desc {
-    color: #333;
-    max-width: 100%;
-    font-size: 1.2em;
-    line-height: 25px;
+  color: #333;
+  max-width: 100%;
+  font-size: 1.2em;
+  line-height: 25px;
 }
 
 .about__us h2 {
-    max-width: 33.3%;
+  max-width: 33.3%;
 }
 
 .about__us span {
-    color: #005FA3;
+  color: #005FA3;
 }
 
 .about__us .count__cards__box {
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  max-width: 50%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .item__count__about {
-    padding: 0 40px 40px;
-    margin: 15px 0;
-    width: 275px;
-    transition: 0.5s linear;
-    cursor: pointer;
+  padding: 0 40px 40px;
+  margin: 15px 0;
+  width: 275px;
+  max-height: 255px;
+  transition: 0.5s linear;
+  cursor: pointer;
 }
+
 .item__count__about .count {
-    font-size: 4em;
-    font-weight: bold;
+  font-size: 4em;
+  font-weight: bold;
 }
+
 .item__count__about p {
-    max-width: 115px;
-    margin-bottom: 47px;
-    color: #000;
-    font-weight: bold;
+  max-width: 115px;
+  margin-bottom: 47px;
+  color: #000;
+  font-weight: bold;
 }
+
 .item__count__about a {
-    color: #005FA3;
-    font-weight: bold;
+  color: #005FA3;
+  font-weight: bold;
 }
+
 .item__count__about:hover {
-    background: #005FA3;
-    opacity: 0.8;
+  background: #005FA3;
+  opacity: 0.8;
 }
-.item__count__about:hover > .count{
-    color: #fff;
+
+.item__count__about:hover > .count {
+  color: #fff;
 }
+
 .item__count__about:hover > p {
-    color: #fff;
+  color: #fff;
 }
+
 .item__count__about:hover > a {
-    color: #fff;
+  color: #fff;
 }
+
+@media (max-width: 1150px) {
+
+  .about__us {
+
+    & .about__box {
+      max-width: 30%;
+    }
+
+    & .count__cards__box {
+      margin-top: 50px;
+    }
+
+    & .item__count__about {
+      width: 220px;
+      padding: 0 30px 20px;
+
+      & .count {
+        font-size: 3em;
+      }
+
+      & p {
+        max-width: 100px;
+        margin-bottom: 37px;
+      }
+    }
+
+  }
+
+}
+

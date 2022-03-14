@@ -13,10 +13,6 @@
   align-items: flex-start;
 }
 
-.footer .contact__info {
-  max-width: 500px;
-}
-
 .footer .contact__info .info {
   font-size: 1.2em;
   color: #BDBDBD;
@@ -25,12 +21,13 @@
 
 .footer .wrap__contacts {
   display: flex;
+  flex-wrap: wrap;
 
   & a {
     text-decoration: none;
     color: #BDBDBD;
     font-size: 1.3em;
-    margin-right: 40px;
+    margin: 0 30px 25px 0;
   }
 }
 
@@ -42,6 +39,14 @@
   color: #fff;
 }
 
+
+.footer .contact__info {
+  max-width: 45%;
+}
+
+.footer .add__comment__box {
+  max-width: 50%;
+}
 
 /*inputs*/
 
@@ -68,10 +73,6 @@
   color: #c1c1c1;
   background: inherit;
   padding-bottom: 5px;
-}
-
-.footer .contact__info {
-  max-width: 540px;
 }
 
 .footer .add__comment__box textarea {
@@ -110,4 +111,17 @@
 .footer .footer__bottom p {
   margin-bottom: 40px;
   color: #BDBDBD;
+}
+
+@media (max-width: 1040px) {
+  .footer {
+
+    & .contact__info {
+      max-width: 40%;
+    }
+
+    & .add__comment__box {
+      margin-top: 40px;
+    }
+  }
 }
