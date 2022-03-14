@@ -198,16 +198,30 @@
   .menu .menu__mobile ul {
     width: 50%;
   }
+  @keyframes vsplivashka {
+    0% {
+      transform: translateY(-3000px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
   .menu .menu__mobile .menu__mobile__content {
     z-index: 1000;
     position: fixed;
-    display: none;
+    transform: translateY(-3000px);
+    display: flex;
     padding: 70px 0 20px 50px;
     top: 0;
     right: 0;
     width: 100%;
     min-height: 5%;
     background: #21262d;
+    border: 1px solid #fff;
+    border-top: none;
+    box-shadow: 0 0 50px 0 #212B31;
   }
   .menu .menu__mobile .menu__mobile__content li {
     font-size: 2em;
@@ -229,10 +243,14 @@
     border-radius: 3px;
   }
   .menu .menu__mobile .menu__open {
-    display: flex;
+    animation: vsplivashka 0.6s ease-in-out;
+    animation-iteration-count: 1;
+    transform: translateY(0);
   }
   .menu .menu__mobile .menuBtn {
-    position: relative;
+    position: fixed;
+    top: 0;
+    right: 6.6%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -242,6 +260,16 @@
     transition: all 0.5s ease-in-out;
     border-radius: 10px;
     z-index: 10000;
+    background: #fff;
+  }
+  .menu .menu__mobile .openBtn {
+    background: inherit;
+  }
+  .menu .menu__mobile .openBtn .menuBtn__burger {
+    background: #fff;
+  }
+  .menu .menu__mobile .openBtn .menuBtn__burger:after, .menu .menu__mobile .openBtn .menuBtn__burger:before {
+    background: #fff;
   }
   .menu .menu__mobile .menuBtn .menuBtn__burger {
     width: 35px;
