@@ -39,3 +39,17 @@
     }
   }
 }
+
+
+@media (max-width: 1000px) {
+  .clients {
+
+    & .swiper {
+
+      & .swiper-slide {
+        margin: 20px 0;
+      }
+    }
+  }
+
+}

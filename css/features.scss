@@ -57,6 +57,11 @@
   z-index: 100;
 }
 
-@media (max-width: 1150px) {
-  
+@media (max-width: 1000px) {
+ .specialize {
+
+   & .item__accounting {
+     max-width: 50%;
+   }
+ }
 }

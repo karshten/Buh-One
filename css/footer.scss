@@ -103,9 +103,22 @@
 }
 
 .footer .footer__bottom {
+  max-width: 100%;
+  position: relative;
   margin: 170px auto;
   display: flex;
   justify-content: space-between;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    background: #21262d;
+    height: 1px;
+    width: 100%;
+    z-index: 10;
+  }
 }
 
 .footer .footer__bottom p {
@@ -122,6 +135,10 @@
 
     & .add__comment__box {
       margin-top: 40px;
+    }
+
+    .footer__bottom {
+      margin: 120px auto;
     }
   }
 }
