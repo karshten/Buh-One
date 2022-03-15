@@ -78,7 +78,7 @@
   height: 60px;
   cursor: pointer;
   color: #fff;
-  background: rgba(201, 195, 195, 0.4);
+  background: rgba(243, 243, 243, 0.4);
   transition: 0.5s ease;
 }
 .flex-btnsPag .swiper__btns .swiper-button-next:hover, .flex-btnsPag .swiper__btns .swiper-button-prev:hover {
@@ -106,6 +106,14 @@
   margin-right: 40px;
 }
 
+@media (max-width: 1000px) {
+  .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    background: #fff;
+    width: 18px;
+    height: 18px;
+    margin-right: 40px;
+  }
+}
 .menu {
   margin: 10px 0 20px;
 }
@@ -168,11 +176,11 @@
   position: relative;
 }
 .menu .container .menu__link .menu__content__current__link:after, .menu .container .menu__link .menu__content__current__link:before {
-  top: 15%;
+  top: 20%;
   content: "";
   position: absolute;
   width: 3px;
-  height: 70%;
+  height: 61%;
   background: #005FA3;
 }
 .menu .container .menu__link .menu__content__current__link:after {
@@ -186,8 +194,11 @@
 }
 @media (max-width: 1000px) {
   .menu {
+    margin: 20px 0;
+  }
+  .menu .container {
     position: relative;
-    margin: 0 0 20px;
+    align-items: center;
   }
   .menu .menu__content {
     display: none;
@@ -196,11 +207,15 @@
     display: block;
   }
   .menu .menu__mobile ul {
+    margin-top: 20px;
+    padding-top: 30px;
+    box-shadow: 0 0 5px 0 #787878;
+    border-radius: 5px;
     width: 50%;
   }
   @keyframes vsplivashka {
     0% {
-      transform: translateY(-3000px);
+      transform: translateY(-1000px);
       opacity: 0;
     }
     100% {
@@ -208,12 +223,22 @@
       opacity: 1;
     }
   }
+  @keyframes vsplivashka-reverse {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-1000px);
+      opacity: 0;
+    }
+  }
   .menu .menu__mobile .menu__mobile__content {
     z-index: 1000;
     position: fixed;
     transform: translateY(-3000px);
     display: flex;
-    padding: 70px 0 20px 50px;
+    padding: 70px 30px 50px;
     top: 0;
     right: 0;
     width: 100%;
@@ -224,7 +249,7 @@
     box-shadow: 0 0 50px 0 #212B31;
   }
   .menu .menu__mobile .menu__mobile__content li {
-    font-size: 2em;
+    font-size: 1.7em;
     margin-bottom: 40px;
   }
   .menu .menu__mobile .menu__mobile__content li svg {
@@ -237,20 +262,24 @@
     transition: 0.3s linear;
   }
   .menu .menu__mobile .menu__mobile__content a:hover {
-    padding: 5px;
+    padding: 10px;
     background: #fff;
     color: #21262d;
-    border-radius: 3px;
+    border-radius: 5px;
   }
   .menu .menu__mobile .menu__open {
     animation: vsplivashka 0.6s ease-in-out;
     animation-iteration-count: 1;
     transform: translateY(0);
   }
+  .menu .menu__mobile .menu__close-animation {
+    animation: vsplivashka-reverse 0.6s ease-in-out;
+    animation-iteration-count: 1;
+  }
   .menu .menu__mobile .menuBtn {
     position: fixed;
-    top: 0;
-    right: 6.6%;
+    top: 8px;
+    right: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -260,7 +289,9 @@
     transition: all 0.5s ease-in-out;
     border-radius: 10px;
     z-index: 10000;
-    background: #fff;
+    background: inherit;
+    box-shadow: 0 0 10px 0 #fff;
+    opacity: 0.8;
   }
   .menu .menu__mobile .openBtn {
     background: inherit;
@@ -276,7 +307,7 @@
     height: 4px;
     background: #212B31;
     border-radius: 2.5px;
-    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    box-shadow: 0 2px 3px #fff;
     transition: all 0.5s ease-in-out;
   }
   .menu .menu__mobile .menuBtn__burger::before,
@@ -287,7 +318,7 @@
     height: 4px;
     background: #212B31;
     border-radius: 2.5px;
-    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    box-shadow: 0 2px 3px #fff;
     transition: all 0.5s ease-in-out;
   }
   .menu .menu__mobile .menuBtn__burger::before {
@@ -510,7 +541,7 @@
   margin-right: 35px;
 }
 .reviews .swiper-wrapper .swiper-slide {
-  background: #f0f1f3;
+  background: #fff;
   padding: 50px 0;
   border-radius: 3%;
 }

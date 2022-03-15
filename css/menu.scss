@@ -76,11 +76,11 @@
       position: relative;
 
       &:after, &:before {
-        top: 15%;
+        top: 20%;
         content: "";
         position: absolute;
         width: 3px;
-        height: 70%;
+        height: 61%;
         background: #005FA3;
       }
 
@@ -105,8 +105,12 @@
 
 @media (max-width: 1000px) {
   .menu {
-    position: relative;
-    margin: 0 0 20px;
+    margin: 20px 0;
+
+    & .container {
+      position: relative;
+      align-items: center;
+    }
 
     & .menu__content {
       display: none;
@@ -116,12 +120,16 @@
       display: block;
 
       & ul {
+        margin-top: 20px;
+        padding-top: 30px;
+        box-shadow: 0 0 5px 0 #787878;
+        border-radius: 5px;
         width: 50%;
       }
 
       @keyframes vsplivashka {
         0% {
-          transform: translateY(-3000px);
+          transform: translateY(-1000px);
           opacity: 0;
         }
 
@@ -131,12 +139,24 @@
         }
       }
 
+      @keyframes vsplivashka-reverse {
+        0% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+
+        100% {
+          transform: translateY(-1000px);
+          opacity: 0;
+        }
+      }
+
       & .menu__mobile__content {
         z-index: 1000;
         position: fixed;
         transform: translateY(-3000px);
         display: flex;
-        padding: 70px 0 20px 50px;
+        padding: 70px 30px 50px;
         top: 0;
         right: 0;
         width: 100%;
@@ -147,7 +167,7 @@
         box-shadow: 0 0 50px 0 #212B31;
 
         & li {
-          font-size: 2em;
+          font-size: 1.7em;
           margin-bottom: 40px;
 
           & svg {
@@ -162,24 +182,29 @@
           transition: 0.3s linear;
 
           &:hover {
-            padding: 5px;
+            padding: 10px;
             background: #fff;
             color: #21262d;
-            border-radius: 3px;
+            border-radius: 5px;
           }
         }
       }
 
       & .menu__open {
-        animation: vsplivashka .6s ease-in-out ;
+        animation: vsplivashka .6s ease-in-out;
         animation-iteration-count: 1;
         transform: translateY(0);
       }
 
+      & .menu__close-animation {
+        animation: vsplivashka-reverse .6s ease-in-out;
+        animation-iteration-count: 1;
+      }
+
       .menuBtn {
         position: fixed;
-        top: 0;
-        right: 6.6%;
+        top: 8px;
+        right: 45px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -189,13 +214,17 @@
         transition: all .5s ease-in-out;
         border-radius: 10px;
         z-index: 10000;
-        background: #fff;
+        background: inherit;
+        box-shadow: 0 0 10px 0 #fff;
+        opacity: .8;
       }
 
       .openBtn {
         background: inherit;
+
         & .menuBtn__burger {
           background: #fff;
+
           &:after, &:before {
             background: #fff;
           }
@@ -207,7 +236,7 @@
         height: 4px;
         background: #212B31;
         border-radius: 2.5px;
-        box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+        box-shadow: 0 2px 3px #fff;
         transition: all .5s ease-in-out;
       }
 
@@ -219,7 +248,7 @@
         height: 4px;
         background: #212B31;
         border-radius: 2.5px;
-        box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+        box-shadow: 0 2px 3px #fff;
         transition: all .5s ease-in-out;
       }
 

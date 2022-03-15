@@ -1,8 +1,8 @@
 var swiper = new Swiper(".mySwiper", {
-    loop:true,
+    loop: true,
     pagination: {
         el: ".swiper-pagination",
-        clickable:true,
+        clickable: true,
     },
     navigation: {
         nextEl: ".swiper-button-next",
@@ -15,13 +15,17 @@ const menu = document.querySelector('.menu__mobile__content')
 let menuOpen = false;
 menuBtn.addEventListener('click', () => {
 
-  if(!menuOpen) {
-    menu.classList.add('menu__open');
-    menuBtn.classList.add('openBtn');
-    menuOpen = true;
-  } else {
-    menu.classList.remove('menu__open');
-    menuBtn.classList.remove('openBtn');
-    menuOpen = false;
-  }
+    if (!menuOpen) {
+        menu.classList.remove('menu__close-animation')
+        menu.classList.add('menu__open');
+        menuBtn.classList.add('openBtn');
+        menuOpen = true;
+    } else {
+        setTimeout(() => {
+            menu.classList.remove('menu__open');
+            menuOpen = false;
+        },600)
+        menu.classList.add('menu__close-animation')
+        menuBtn.classList.remove('openBtn');
+    }
 });
