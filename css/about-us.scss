@@ -40,7 +40,7 @@
   margin: 15px 0;
   width: 275px;
   max-height: 255px;
-  transition: 0.5s linear;
+  transition: 0.3s linear;
   cursor: pointer;
 }
 
@@ -48,7 +48,7 @@
   z-index: 2;
   font-size: 4em;
   font-weight: bold;
-  transition: .4s ease-in-out;
+  transition: inherit;
 }
 
 .item__count__about p {
@@ -57,14 +57,14 @@
   margin-bottom: 47px;
   color: #000;
   font-weight: bold;
-  transition: .4s ease-in-out;
+  transition: inherit;
 }
 
 .item__count__about a {
   z-index: 2;
   color: #005FA3;
   font-weight: bold;
-  transition: .3s ease-in-out;
+  transition:inherit;
 }
 
 .item__count__about {
