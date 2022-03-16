@@ -3,6 +3,10 @@
 
   & .menu__mobile {
     display: none;
+
+    & a {
+      text-decoration: none;
+    }
   }
 
   & ul {
@@ -76,7 +80,7 @@
       }
     }
 
-    & .menu__link a {
+    & .menu__link__animation a {
       color: #222;
       text-decoration: none;
       transition: 0.3s;
@@ -113,36 +117,9 @@
         }
       }
     }
-
   }
-
-  & .menu__link .menu__content__current__link {
-
-    //  &:after, &:before {
-    //    top: 20%;
-    //    content: "";
-    //    position: absolute;
-    //    width: 3px;
-    //    height: 61%;
-    //    background: #005FA3;
-    //  }
-    //
-    //  &:after {
-    //    left: 50%;
-    //  }
-    //
-    //  &:before {
-    //    right: 50%;
-    //  }
-    //}
-    //
-    //& a:hover {
-    //  color: #005FA3;
-    //
-
-  }
-
 }
+
 
 
 @media (max-width: 1000px) {
