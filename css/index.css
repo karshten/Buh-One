@@ -403,7 +403,7 @@
 }
 
 .specialize .item__accounting {
-  width: 100%;
+  width: 350px;
   height: 100%;
   position: relative;
   border-radius: 5px;
@@ -412,6 +412,7 @@
 
 .item__accounting img {
   width: 100%;
+  height: 90%;
   transition: 0.8s;
 }
 
@@ -496,7 +497,7 @@
   z-index: 2;
   color: #005FA3;
   font-weight: bold;
-  transition: 0.4s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .item__count__about::after {
@@ -508,14 +509,14 @@
   height: 10%;
   top: 0;
   left: 0;
-  transition: 0.4s ease-in-out;
+  transition: 0.3s ease-in-out;
   opacity: 0;
 }
 .item__count__about:hover::after {
   opacity: 1;
   width: 90%;
   height: 100%;
-  transition: 0.5s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .item__count__about:hover > .count {
