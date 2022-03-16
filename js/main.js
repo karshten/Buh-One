@@ -8,7 +8,29 @@ var swiper = new Swiper(".mySwiper", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+
 });
+
+const headerSlider = new Swiper(".header__slider", {
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+
+    autoplay: {
+        delay:2000,
+        disableOnInteraction:false
+    }
+
+});
+
+
+
 
 const menuBtn = document.querySelector('.menuBtn');
 const menu = document.querySelector('.menu__mobile__content')
@@ -24,7 +46,7 @@ menuBtn.addEventListener('click', () => {
         setTimeout(() => {
             menu.classList.remove('menu__open');
             menuOpen = false;
-        },600)
+        }, 600)
         menu.classList.add('menu__close-animation')
         menuBtn.classList.remove('openBtn');
     }

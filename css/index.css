@@ -115,7 +115,7 @@
   }
 }
 .menu {
-  margin: 10px 0 20px;
+  margin: 20px 0 20px;
 }
 .menu .menu__mobile {
   display: none;
@@ -194,7 +194,7 @@
 }
 @media (max-width: 1000px) {
   .menu {
-    margin: 20px 0;
+    margin: 40px 0;
   }
   .menu .container {
     position: relative;
@@ -207,7 +207,7 @@
     display: block;
   }
   .menu .menu__mobile ul {
-    margin-top: 20px;
+    margin-top: 40px;
     padding-top: 30px;
     box-shadow: 0 0 5px 0 #787878;
     border-radius: 5px;
@@ -278,7 +278,7 @@
   }
   .menu .menu__mobile .menuBtn {
     position: fixed;
-    top: 8px;
+    top: 30px;
     right: 45px;
     display: flex;
     justify-content: center;
@@ -350,53 +350,84 @@
   width: 100%;
 }
 
-.specialize .item__accounting {
-  position: relative;
-  background: url("../images/Rectangle 2.svg") no-repeat;
-  background-size: cover;
-  border-radius: 5px;
-  max-width: 30.3%;
-  height: 370px;
-  display: flex;
-  align-items: flex-end;
-  padding: 0 0 45px 45px;
-  margin-bottom: 30px;
+.cards__box__card {
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  height: 370px;
+  max-width: 50%;
+  margin-bottom: 30px;
 }
-
-.item__accounting::after {
-  content: " ";
+.cards__box__card .details {
   position: absolute;
-  background: rgba(34, 161, 245, 0.64);
-  width: 10%;
-  height: 10%;
-  top: 50%;
-  bottom: 50%;
-  right: 50%;
-  left: 50%;
-  transition: 0.4s ease-in-out;
-  opacity: 0;
-}
-.item__accounting:hover::after {
-  opacity: 0.5;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
-  transition: 0.5s ease-in-out;
+  width: 100%;
+  /*100%*/
+  height: 100%;
+  transition: 0.8s;
+  transform-origin: left;
+  transform: perspective(1000px) rotateY(-90deg);
+  cursor: pointer;
+}
+.cards__box__card .details .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background: #fff;
+  position: absolute;
+  height: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+.cards__box__card .details .center a {
+  display: block;
+  text-decoration: none;
+  font-size: 18px;
+}
+.cards__box__card .details .center p {
+  margin: 20px 0;
+  font-size: 1em;
+}
+.cards__box__card .details .center h3 {
+  font-size: 2em;
+}
+.cards__box__card .details .center2 {
+  height: 60%;
+}
+.cards__box__card .details2 {
+  width: 75%;
 }
 
-.specialize .item__accounting p {
-  color: #fff;
-  font-size: 1.5em;
-  font-weight: bold;
-  max-width: 50%;
-  z-index: 100;
+.specialize .item__accounting {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-@media (max-width: 1000px) {
-  .specialize .item__accounting {
-    max-width: 50%;
+.item__accounting img {
+  width: 100%;
+  transition: 0.8s;
+}
+
+.cards__box__card:hover .item__accounting img {
+  opacity: 0.5;
+  transform: translateX(30%);
+  /*100%*/
+}
+
+.cards__box__card:hover .details {
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+@media (max-width: 1100px) {
+  .specialize .cards__box {
+    justify-content: space-evenly;
   }
 }
 .about__us {
@@ -435,7 +466,9 @@
 }
 
 .item__count__about {
-  padding: 0 40px 40px;
+  z-index: 2;
+  position: relative;
+  padding: 0 40px 50px;
   margin: 15px 0;
   width: 275px;
   max-height: 255px;
@@ -444,25 +477,45 @@
 }
 
 .item__count__about .count {
+  z-index: 2;
   font-size: 4em;
   font-weight: bold;
+  transition: 0.4s ease-in-out;
 }
 
 .item__count__about p {
+  z-index: 2;
   max-width: 115px;
   margin-bottom: 47px;
   color: #000;
   font-weight: bold;
+  transition: 0.4s ease-in-out;
 }
 
 .item__count__about a {
+  z-index: 2;
   color: #005FA3;
   font-weight: bold;
+  transition: 0.4s ease-in-out;
 }
 
-.item__count__about:hover {
+.item__count__about::after {
+  content: " ";
+  position: absolute;
   background: #005FA3;
-  opacity: 0.8;
+  z-index: -1;
+  width: 10%;
+  height: 10%;
+  top: 0;
+  left: 0;
+  transition: 0.4s ease-in-out;
+  opacity: 0;
+}
+.item__count__about:hover::after {
+  opacity: 1;
+  width: 90%;
+  height: 100%;
+  transition: 0.5s ease-in-out;
 }
 
 .item__count__about:hover > .count {
@@ -486,6 +539,7 @@
   }
   .about__us .item__count__about {
     width: 220px;
+    max-height: 240px;
     padding: 0 30px 20px;
   }
   .about__us .item__count__about .count {
@@ -673,7 +727,6 @@
 }
 
 .footer .footer__bottom {
-  max-width: 100%;
   position: relative;
   margin: 170px auto;
   display: flex;

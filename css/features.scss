@@ -9,59 +9,92 @@
   width: 100%;
 }
 
-.specialize .item__accounting {
-  position: relative;
-  background: url("../images/Rectangle 2.svg") no-repeat;
-  background-size: cover;
-  border-radius: 5px;
-  max-width: 30.3%;
-  height: 370px;
-  display: flex;
-  align-items: flex-end;
-  padding: 0 0 45px 45px;
-  margin-bottom: 30px;
+.cards__box__card {
   cursor: pointer;
-}
+  position: relative;
+  overflow: hidden;
+  height: 370px;
+  max-width: 50%;
+  margin-bottom: 30px;
 
-.item__accounting {
-  &::after{
-    content: " ";
+   & .details {
     position: absolute;
-    background: rgba(34, 161, 245, 0.64);
-    width: 10%;
-    height: 10%;
-    top: 50%;
-    bottom: 50%;
-    right: 50%;
-    left: 50%;
-    transition: 0.4s ease-in-out;
-    opacity: 0;
-  }
-  &:hover {
-    &::after {
-      opacity: .5;
-      width: 100%;
+    top: 0;
+    left: 0;
+    width: 100%; /*100%*/
+    height: 100%;
+    transition: .8s;
+    transform-origin: left;
+    transform: perspective(1000px) rotateY(-90deg);
+    cursor: pointer;
+
+    & .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      background: #fff;
+      position: absolute;
       height: 100%;
-      top: 0;
-      left: 0;
-      transition: .5s ease-in-out;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1000;
+
+      & a {
+        display: block;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      & p {
+        margin: 20px 0;
+        font-size: 1em;
+      }
+
+      & h3 {
+        font-size: 2em;
+      }
+    }
+
+    & .center2 {
+      height: 60%;
     }
   }
+
+  & .details2 {
+    width: 75%;
+  }
+
 }
 
-.specialize .item__accounting p {
-  color: #fff;
-  font-size: 1.5em;
-  font-weight: bold;
-  max-width: 50%;
-  z-index: 100;
+.specialize .item__accounting {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-@media (max-width: 1000px) {
- .specialize {
+.item__accounting img {
+  width: 100%;
+  transition: .8s;
+}
 
-   & .item__accounting {
-     max-width: 50%;
-   }
- }
+
+.cards__box__card:hover .item__accounting img {
+  opacity: .5;
+  transform: translateX(30%); /*100%*/
+}
+
+
+.cards__box__card:hover .details {
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+
+@media (max-width: 1100px) {
+  .specialize .cards__box {
+    justify-content: space-evenly;
+  }
 }

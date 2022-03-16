@@ -34,7 +34,9 @@
 }
 
 .item__count__about {
-  padding: 0 40px 40px;
+  z-index: 2;
+  position: relative;
+  padding: 0 40px 50px;
   margin: 15px 0;
   width: 275px;
   max-height: 255px;
@@ -43,25 +45,49 @@
 }
 
 .item__count__about .count {
+  z-index: 2;
   font-size: 4em;
   font-weight: bold;
+  transition: .4s ease-in-out;
 }
 
 .item__count__about p {
+  z-index: 2;
   max-width: 115px;
   margin-bottom: 47px;
   color: #000;
   font-weight: bold;
+  transition: .4s ease-in-out;
 }
 
 .item__count__about a {
+  z-index: 2;
   color: #005FA3;
   font-weight: bold;
+  transition: .4s ease-in-out;
 }
 
-.item__count__about:hover {
-  background: #005FA3;
-  opacity: 0.8;
+.item__count__about {
+  &::after{
+    content: " ";
+    position: absolute;
+    background: #005FA3;
+    z-index: -1;
+    width: 10%;
+    height: 10%;
+    top: 0;
+    left: 0;
+    transition: 0.4s ease-in-out;
+    opacity: 0;
+  }
+  &:hover {
+    &::after {
+      opacity: 1;
+      width: 90%;
+      height: 100%;
+      transition: .5s ease-in-out;
+    }
+  }
 }
 
 .item__count__about:hover > .count {
@@ -90,6 +116,7 @@
 
     & .item__count__about {
       width: 220px;
+      max-height: 240px;
       padding: 0 30px 20px;
 
       & .count {
