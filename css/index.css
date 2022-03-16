@@ -141,6 +141,14 @@
 }
 .menu .container .menu__content ul a {
   margin-bottom: 20px;
+  color: #222;
+  text-decoration: none;
+}
+.menu .container .menu__content ul a:hover {
+  color: #005FA3;
+}
+.menu .container .menu__content ul .menu__content__current__link {
+  color: #005FA3;
 }
 .menu .container .menu__content ul li {
   font-size: 0.9em;
@@ -167,30 +175,35 @@
   font-size: 2em;
   color: #005FA3;
 }
-.menu .container a {
+.menu .container .menu__link a {
   color: #222;
   text-decoration: none;
   transition: 0.3s;
-}
-.menu .container .menu__link .menu__content__current__link {
   position: relative;
 }
-.menu .container .menu__link .menu__content__current__link:after, .menu .container .menu__link .menu__content__current__link:before {
+.menu .container .menu__link a:after, .menu .container .menu__link a:before {
   top: 20%;
   content: "";
   position: absolute;
-  width: 3px;
+  width: 2.5px;
   height: 61%;
   background: #005FA3;
+  transition: 0.5s ease-in-out;
+  opacity: 0;
 }
-.menu .container .menu__link .menu__content__current__link:after {
-  left: -6px;
+.menu .container .menu__link a:after {
+  left: 50%;
 }
-.menu .container .menu__link .menu__content__current__link:before {
-  right: -6px;
+.menu .container .menu__link a:before {
+  right: 50%;
 }
-.menu .container a:hover {
-  color: #005FA3;
+.menu .container .menu__link a:hover::before {
+  right: -5px;
+  opacity: 1;
+}
+.menu .container .menu__link a:hover::after {
+  opacity: 1;
+  left: -5px;
 }
 @media (max-width: 1000px) {
   .menu {
